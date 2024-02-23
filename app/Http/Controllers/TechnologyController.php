@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Type;
+use App\Models\Technology;
 
-class TypeController extends Controller
+class TechnologyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
+        $technologies = Technology::all();
 
-        return view('pages.index', compact('types'));
+        return view('pages.index', compact('technologies'));
     }
 
     /**

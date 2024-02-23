@@ -9,8 +9,14 @@ class Project extends Model
 {
     use HasFactory;
 
-    public function Type()
+    public function type()
     {
         return $this->belongsTo(Type::class);
+    }
+
+    public function technology()
+    {
+
+        return $this->belongsToMany(Technology::class);
     }
 }

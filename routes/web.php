@@ -3,12 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\TechnologyController;
 
 Route::get('/', [ProjectController::class, 'index'])
     ->name('projects.index');
 
 Route::get('/', [TypeController::class, 'index'])
     ->name('types.index');
+
+Route::get('/', [TechnologyController::class, 'index'])
+    ->name('technolgies.index');
 
 Route::get('/projects/create', [ProjectController::class, 'create'])
     ->name('projects.create');
