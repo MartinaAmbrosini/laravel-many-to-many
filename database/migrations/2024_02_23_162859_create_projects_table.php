@@ -16,10 +16,10 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->enum('status', ['completed', 'in_progress', 'planned']);
+            // $table->enum('status', ['completed', 'in_progress', 'planned']);
             $table->string('image', 128)->nullable();
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            // $table->dateTime('start_date');
+            // $table->dateTime('end_date');
             $table->timestamps();
         });
     }

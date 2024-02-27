@@ -19,9 +19,9 @@ class ProjectFactory extends Factory
         return [
             'name' => fake()->sentence(3),
             'description' => fake()->paragraph(4),
-            'status' => fake()->randomElement(['completed', 'in_progress', 'planned']),
-            'start_date' => fake()->dateTimeBetween('-1 year', 'now'),
-            'end_date' => fake()->dateTimeBetween('now', '+1 year'),
+            // 'status' => fake()->randomElement(['completed', 'in_progress', 'planned']),
+            // 'start_date' => fake()->dateTimeBetween('-1 year', 'now'),
+            // 'end_date' => fake()->dateTimeBetween('now', '+1 year'),
         ];
     }
 }

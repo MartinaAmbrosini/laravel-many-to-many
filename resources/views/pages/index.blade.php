@@ -1,9 +1,22 @@
 @extends('layouts.main-layout')
 @section('head')
-    <title>Home</title>
+    <title>Projects</title>
 @endsection
 @section('content')
-    <h1>Hello, World!</h1>
-   
-</div>
+    <h1>Types</h1>
+    <ul>
+        @foreach ($types as $type)
+            <li>
+                {{ $type -> title }}
+                <br>
+                <ul>
+                    @foreach ($type -> projects as $project)
+                        <li>
+                            {{ $project -> name }}
+                        </li>
+                    @endforeach
+                </ul>
+            </li>
+        @endforeach
+    </ul>
 @endsection
