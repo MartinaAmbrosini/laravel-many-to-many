@@ -3,7 +3,5 @@
     <title>Home</title>
 @endsection
 @section('content')
-    <h1>Hello, World!</h1>
-   
-</div>
+    <img src="{{ asset('storage/' . $project -> image) }}" alt="" width="300px">
 @endsection
