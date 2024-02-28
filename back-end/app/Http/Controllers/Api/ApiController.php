@@ -26,7 +26,7 @@ class ApiController extends Controller
         return response()->json([
 
             'status' => 'success',
-            'techonologies' => $technologies
+            'technologies' => $technologies
         ]);
 
     }

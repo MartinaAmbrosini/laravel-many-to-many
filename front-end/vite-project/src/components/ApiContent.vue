@@ -20,10 +20,10 @@ export default {
                 const data = res.data;
                 console.log(data);
 
-                if (data.success == 'success')
+                if (data.status == 'success')
                     this.technologies = data.technologies;
 
-                console.log("technologies", this.technologies)
+                console.log('technologies', this.technologies);
 
             })
 
@@ -39,6 +39,13 @@ export default {
 
 <template>
     <h1>
-        Technologies!
+        Technologies:
     </h1>
+
+    <ul>
+        <li v-for="technology in technologies" :key="technology.id">
+            <h1> {{ technology.name }}</h1>
+            <p>{{ technology.description }}</p>
+        </li>
+    </ul>
 </template>
